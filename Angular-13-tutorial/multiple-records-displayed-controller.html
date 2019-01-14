@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script type="text/javascript" src="controller/multiple-entries-controller.js"></script>
+</head>
+    <body>
+            <div ng-app="mainApp" ng-controller="studentController">
+                <table>
+                        <tr>
+                             <td> Full Name: {{ student.fullName() }} </td>
+                        </tr>
+                        <tr>
+                              <td> Fees {{student.fees}} </td>
+                        </tr>
+                        <tr>
+                              <th> Classes </th>
+
+                        </tr>
+                        <tr ng-repeat="subject in student.subjects">
+                            <td> {{ subject.name + " " + subject.marks }} </td>
+                        </tr>
+                </table>
+                 
+            </div>
+    </body>
+</html>
